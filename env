@@ -1,0 +1,10 @@
+## do not put this file under version control!
+SECRET_KEY='c_r-e8v1divj8y+hu@-w=n#$xj#ciuejybd3_(k2h789(mcv8$'
+DEBUG=1
+DJANGO_ALLOWED_HOSTS=*
+SQL_ENGINE=django.db.backends.postgresql
+SQL_DATABASE=postgres
+SQL_USER=postgres
+SQL_PASSWORD=postgres
+SQL_HOST=db
+SQL_PORT=5432
