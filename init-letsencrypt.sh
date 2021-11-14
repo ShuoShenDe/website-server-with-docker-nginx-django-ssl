@@ -8,7 +8,7 @@ fi
 domains=(api.eigenspace.tech)
 rsa_key_size=4096
 data_path="/home/certbot"
-email="" # Adding a valid address is strongly recommended
+email="susanshende@gmail.com" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then

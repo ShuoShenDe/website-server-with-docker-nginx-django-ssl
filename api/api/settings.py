@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-fk(nkcn9$y)3dx30go(n3i#=j_0$v53gk%yil^nk4%=g5!$m&m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [os.environ.get("DJANGO_ALLOWED_HOSTS", default = "*" )]
 
 
 # Application definition
@@ -80,12 +80,12 @@ WSGI_APPLICATION = 'api.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
-        "NAME": os.environ.get("SQL_DATABASE", "postgres"),
-        "USER": os.environ.get("SQL_USER", "postgres"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", "postgres"),
-        "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432"),
+        "ENGINE": os.environ.get("ENGINE", "django.db.backends.postgresql"),
+        "NAME": os.environ.get("POSTGRES_DB", "postgres"),
+        "USER": os.environ.get("POSTGRES_USER", "postgres"),
+        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "postgres"),
+        "HOST": os.environ.get("HOST", "db"),
+        "PORT": os.environ.get("PORT", "5432"),
     }
 }
 # Password validation
