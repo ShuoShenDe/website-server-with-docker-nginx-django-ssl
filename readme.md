@@ -23,3 +23,7 @@ home
 ├── nginx
 ├── postgres
 ```
+
+### download docker and docker-compose 
+### change settting of Dockerfile, docker-compose.yml(path, domain, and so on)
+### run lentencrypt.sh
