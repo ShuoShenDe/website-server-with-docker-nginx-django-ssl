@@ -17,7 +17,8 @@ services:
         volumes:
             - static:/home/api/staticfiles
             - media:/home/api/mediafiles
-        command: sh -c "gunicorn api.wsgi:application --bind 0.0.0.0:8000"
+            - /home/socket/:/home/socket/
+        command: sh -c "gunicorn -b unix:/home/socket/api.sock --workers=2 -u root api.wsgi:application"
         env_file:
             - /home/env
         build: /home/api/
@@ -35,6 +36,7 @@ services:
             - /home/nginx:/etc/nginx/conf.d
             - /home/certbot/conf:/etc/letsencrypt
             - /home/certbot/www:/var/www/certbot 
+            - /home/socket/:/etc/nginx/socket/
         ports:
             - 80:80
             - 443:443
