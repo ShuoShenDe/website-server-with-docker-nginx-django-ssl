@@ -27,3 +27,11 @@ home
 ### download docker and docker-compose 
 ### change settting of Dockerfile, docker-compose.yml(path, domain, and so on)
 ### run lentencrypt.sh
+
+
+
+## Environment
+How to check the process location/how to free the port
+process id：456
+check where it is run: ps aux | grep 4874
+list the porcesses list: lsof -i -P -n | grep LISTEN
