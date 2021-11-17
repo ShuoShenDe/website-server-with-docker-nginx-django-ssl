@@ -38,6 +38,7 @@ list the porcesses list: lsof -i -P -n | grep LISTEN
 
 ## Static files
 lack migration
-
+python manage.py collectstatic --no-input --clear
 ## postgres user problem
 lack migration
+python manage.py createsuperuser.
