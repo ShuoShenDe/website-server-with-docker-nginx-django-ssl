@@ -35,3 +35,9 @@ How to check the process location/how to free the port
 process id：456
 check where it is run: ps aux | grep 4874
 list the porcesses list: lsof -i -P -n | grep LISTEN
+
+## Static files
+lack migration
+
+## postgres user problem
+lack migration
