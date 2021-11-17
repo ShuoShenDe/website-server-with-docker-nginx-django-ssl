@@ -10,7 +10,7 @@ services:
         ports:
             - 5432:5432
         env_file:
-            - /home/.env
+            - /home/db_env
 
     api:
         container_name: api
@@ -20,7 +20,8 @@ services:
             - /home/socket/:/home/socket/
         command: sh -c "gunicorn -b unix:/home/socket/api.sock --workers=2 -u root api.wsgi:application"
         env_file:
-            - /home/env
+            - /home/api_env
+            - /home/db_env
         build: /home/api/
         expose:
             - 8000  
