@@ -42,3 +42,10 @@ python manage.py collectstatic --no-input --clear
 ## postgres user problem
 lack migration
 python manage.py createsuperuser.
+
+FATAL:  password authentication failed for user "postgres"
+```
+docker exec -it ubuntu_bash bash
+psql -U postgres postgres
+Alter user postgres with superuser password 'postgres';
+```
